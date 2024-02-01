@@ -11,5 +11,9 @@ a24_movies = {
     'Comedy': {
         'Quirky': ['Lady Bird', 'The Disaster Artist'],
         'Dark': ['Ingrid Goes West', 'The Lobster']
+    },
+    "Thriller": {
+      "Psychological": ["Enemy", "The Gift", "The Blackcoat's Daughter", "Climax"],
+      "Crime": ["Good Time", "Uncut Gems", "The Killing of a Sacred Deer", "Mississippi Grind"]
     }
 }
