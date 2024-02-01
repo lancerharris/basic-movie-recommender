@@ -2,7 +2,30 @@ from data import a24_movies
 from recommender import suggest_categories, recommend_movies
 from tree_classes import GenreNode
 
+def display_intro():
+    # ASCII Art for "Movie Finder"
+    ascii_art_title = """
+                      _         __ _           _           
+                     (_)       / _(_)         | |          
+ _ __ ___   _____   ___  ___  | |_ _ _ __   __| | ___ _ __ 
+| '_ ` _ \ / _ \ \ / / |/ _ \ |  _| | '_ \ / _` |/ _ \ '__|
+| | | | | | (_) \ V /| |  __/ | | | | | | | (_| |  __/ |   
+|_| |_| |_|\___/ \_/ |_|\___| |_| |_|_| |_|\__,_|\___|_|                                                            
+    """
+    print(ascii_art_title)
+    
+    # App Introduction
+    app_intro = """
+This app helps you discover A24 studio movies based on genre and mood.
+Enter keywords related to the genre of movie you're interested in,
+and we'll suggest some movie moods for you to explore. If you find a mood
+you like, we'll give you a list of related movie recommendations.
+    """
+    print(app_intro)
+
 def main():
+    display_intro()
+
     # Building movie tree tree
     movie_root = {}
     for genre, moods in a24_movies.items():
@@ -13,7 +36,7 @@ def main():
 
     while True:
         # Get user input
-        user_input = input("Enter a genre or mood to get movie recommendations, or 'quit' to exit: ").strip()
+        user_input = input("Enter a genre or mood to get movie recommendations (Horror, Comedy, Thriller, Drama), or 'quit' to exit: ").strip()
         if user_input.lower() == 'quit':
             break
 
